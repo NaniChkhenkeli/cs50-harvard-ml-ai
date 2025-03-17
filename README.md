@@ -1,4 +1,4 @@
-../hw0 solution description are already provided in the project files. 
+../hw0 solution descriptions are provided in the project files. 
 
 ../hw1/minesweeper 
 project implements ai agent that can play the classic game of minesweeper using propositional logic and fnowledge-based reasoning. 
