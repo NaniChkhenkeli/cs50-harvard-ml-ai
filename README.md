@@ -1,6 +1,6 @@
 ../hw0 solution descriptions are provided in the project files. 
 
-../hw1/minesweeper 
+## ../hw1/minesweeper ##
 project implements ai agent that can play the classic game of minesweeper using propositional logic and fnowledge-based reasoning. 
  player must identify all the mines on a grid without clicking on them. ai uses  logical reasoning to determine which cells are safe to click and which cells are likely to contain mines.
 
@@ -31,7 +31,7 @@ make_random_move: returns a random cell to click when no safe moves are availabl
 
 
 
-..\hw1\knights
+## ..\hw1\knights ##
 this project slves logic puzzle and uses logical sentences to represent statement made by characters and determines who is knight or knave. 
 
  how works:
