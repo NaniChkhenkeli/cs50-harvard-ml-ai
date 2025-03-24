@@ -1,6 +1,7 @@
 ../hw0 solution descriptions are provided in the project files. 
 
-## ../hw1/minesweeper ##
+## ../hw1 ##
+minesweeper
 project implements ai agent that can play the classic game of minesweeper using propositional logic and fnowledge-based reasoning. 
  player must identify all the mines on a grid without clicking on them. ai uses  logical reasoning to determine which cells are safe to click and which cells are likely to contain mines.
 
@@ -13,12 +14,14 @@ project implements ai agent that can play the classic game of minesweeper using 
    if sentence has count equal to number of cells, all its cells are mines. 
    if one sentence is subset of another, diff can form new sentence. 
  ai wins if identifies all mines. loses if clicks on a mine. 
-## sentence class ## 
+ 
+ sentence class 
   known_mines: Returns the set of cells that are definitely mines.
   known_safes: Returns the set of cells that are definitely safe.
   mark_mine: Updates the sentence when a cell is confirmed to be a mine.
   mark_safe: Updates the sentence when a cell is confirmed to be safe.
-## minesweeperai class ## 
+  
+  minesweeperai class 
 moves_made: cells that have already been clicked.
 mines: cells known to be mines.
 safes: cells known to be safe.
@@ -31,7 +34,9 @@ make_random_move: returns a random cell to click when no safe moves are availabl
 
 
 
-## ..\hw1\knights ##
+## ..\hw1\ ##
+knights
+
 this project slves logic puzzle and uses logical sentences to represent statement made by characters and determines who is knight or knave. 
 
  how works:
@@ -42,7 +47,7 @@ this project slves logic puzzle and uses logical sentences to represent statemen
  biconditional(AKnight, AKnight)
  model_check function checks all possible combinations of truth assignments to determine which symbols are consistent with the knowledge base.
 
-## puzzles ##
+puzzles 
 puzzle 0:
 A says i am both knight and knave. so A must be a Knave because statement is contradiction. 
 puzzle 1: 
@@ -54,10 +59,15 @@ A says either i am knight or i am knave. => true, A is knight.
 B says i am knave, c is knave. => B's st are contradictory, so B is knave. 
 C says A is knight. => true, c is knight. 
 
+## ..\hw2\ ##
+PageRank algorithm. (sampling + iterative calculation)
 
-for running the code - 
+for this project we needed to work on transition_model, sample_pagerank, iterate_pagerank.py files. 
+first step is to sparse directory of HTML files to create represenation of web pages and their links.
+then function need each html file, extracts links using regular expression and stores them in dictionary. 
+transition_model calculates probability distribution of which page a random surfer would visit next,given the current page and damping vector. it considers both the links from the current page and the overall corpus, ensuring that probabilities sum to 1.
+sample_pagerank function estimates pagerank by simulating random surfer for a specified number of samples. it tracks how often each page is visited and normalizes these counts to derive pagerank values. 
+iterative_pagerank function computes pagerank values iteratively, updating them based on contributions from linking pages until the values converge. 
 
-install dependecies: pip install -r requirements.txt
-then, run the solver: python puzzle.py (for minesweeper use ## python runner.py ## )
 
 
