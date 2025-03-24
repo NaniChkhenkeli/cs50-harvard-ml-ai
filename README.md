@@ -1,6 +1,7 @@
 ../hw0 solution descriptions are provided in the project files. 
 
 ## ../hw1 ##
+------
 minesweeper
 project implements ai agent that can play the classic game of minesweeper using propositional logic and fnowledge-based reasoning. 
  player must identify all the mines on a grid without clicking on them. ai uses  logical reasoning to determine which cells are safe to click and which cells are likely to contain mines.
@@ -32,9 +33,7 @@ add_knowledge: updates the ai's knowledge base with new information about a cell
 make_safe_move: returns a safe cell to click.
 make_random_move: returns a random cell to click when no safe moves are available.
 
-
-
-## ..\hw1\ ##
+------
 knights
 
 this project slves logic puzzle and uses logical sentences to represent statement made by characters and determines who is knight or knave. 
@@ -46,8 +45,9 @@ this project slves logic puzzle and uses logical sentences to represent statemen
  ex: If A says, "I am a Knight," this is represented as:
  biconditional(AKnight, AKnight)
  model_check function checks all possible combinations of truth assignments to determine which symbols are consistent with the knowledge base.
+ 
+puzzles
 
-puzzles 
 puzzle 0:
 A says i am both knight and knave. so A must be a Knave because statement is contradiction. 
 puzzle 1: 
@@ -60,6 +60,8 @@ B says i am knave, c is knave. => B's st are contradictory, so B is knave.
 C says A is knight. => true, c is knight. 
 
 ## ..\hw2\ ##
+
+------
 PageRank algorithm. (sampling + iterative calculation)
 
 for this project we needed to work on transition_model, sample_pagerank, iterate_pagerank.py files. 
@@ -68,6 +70,9 @@ then function need each html file, extracts links using regular expression and s
 transition_model calculates probability distribution of which page a random surfer would visit next,given the current page and damping vector. it considers both the links from the current page and the overall corpus, ensuring that probabilities sum to 1.
 sample_pagerank function estimates pagerank by simulating random surfer for a specified number of samples. it tracks how often each page is visited and normalizes these counts to derive pagerank values. 
 iterative_pagerank function computes pagerank values iteratively, updating them based on contributions from linking pages until the values converge. 
+
+
+------
 
 
 
