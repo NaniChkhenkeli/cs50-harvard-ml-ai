@@ -73,6 +73,14 @@ iterative_pagerank function computes pagerank values iteratively, updating them 
 
 
 ------
+heredity.py
+
+joint_probability function calculates joint probability of the specified gene and trait distributions for all individuals on the family.  if considers if each person has 0,1,2 copies of the gene and if they exhibit the trait, taking into account parental inheritance and mutation probabilities.
+
+update function updates probabilities dictionary with newly computed joint probability. adds p to the appropriate gene and trait ditributions for each person beased on their status in one, two, have_genes. 
+
+normalize function normalizes probability distributions for each person so that they sum to 1. it ensures relative proprrtions of the prob remain the same after normalization. 
+
 
 
 
