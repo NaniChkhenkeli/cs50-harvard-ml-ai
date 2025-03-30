@@ -1,7 +1,6 @@
 ../hw0 solution descriptions are provided in the project files. 
 
 ## ../hw1 ##
-------
 minesweeper
 project implements ai agent that can play the classic game of minesweeper using propositional logic and fnowledge-based reasoning. 
  player must identify all the mines on a grid without clicking on them. ai uses  logical reasoning to determine which cells are safe to click and which cells are likely to contain mines.
@@ -33,7 +32,6 @@ add_knowledge: updates the ai's knowledge base with new information about a cell
 make_safe_move: returns a safe cell to click.
 make_random_move: returns a random cell to click when no safe moves are available.
 
-------
 knights
 
 this project slves logic puzzle and uses logical sentences to represent statement made by characters and determines who is knight or knave. 
@@ -61,7 +59,6 @@ C says A is knight. => true, c is knight.
 
 ## ..\hw2\ ##
 
-------
 PageRank algorithm. (sampling + iterative calculation)
 
 for this project we needed to work on transition_model, sample_pagerank, iterate_pagerank.py files. 
@@ -72,7 +69,6 @@ sample_pagerank function estimates pagerank by simulating random surfer for a sp
 iterative_pagerank function computes pagerank values iteratively, updating them based on contributions from linking pages until the values converge. 
 
 
-------
 heredity.py
 
 joint_probability function calculates joint probability of the specified gene and trait distributions for all individuals on the family.  if considers if each person has 0,1,2 copies of the gene and if they exhibit the trait, taking into account parental inheritance and mutation probabilities.
@@ -82,5 +78,11 @@ update function updates probabilities dictionary with newly computed joint proba
 normalize function normalizes probability distributions for each person so that they sum to 1. it ensures relative proprrtions of the prob remain the same after normalization. 
 
 
+## ..\hw3\ ##
+enforce_node_consistency: removes words that dont match length requirements. filters each variable's domain to only keep words of correct length. 
+revise&ac3:revise removes words from x's domain that have no matching words in y's domain at overlap. ac3() uses queue of arcs to enforce consistency across all variables. goes through constraints until no more revisions needed. 
+backtracking search: choses next variable using MRV and degree heuristics. orders values by lleast constraining first. then recursively tries asiignments with inference. 
+F.EX.
+2 letters horizontally, 2 vertically, overlap(1,1). -> remove all words not of length 2 from domains, ensure horizontal and vertical words agree at overlap, if "at" horizontal, vertical must start from T. contineus until valid solution found or all possibilities exhausted.
 
 
