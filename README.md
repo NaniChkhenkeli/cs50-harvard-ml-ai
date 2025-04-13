@@ -86,3 +86,11 @@ F.EX.
 2 letters horizontally, 2 vertically, overlap(1,1). -> remove all words not of length 2 from domains, ensure horizontal and vertical words agree at overlap, if "at" horizontal, vertical must start from T. contineus until valid solution found or all possibilities exhausted.
 
 
+## ..\hw4\ ##
+Nim project with AI's turn :
+game starts eith 4 piles [1,3,5,7]. player and AI take truns removing any number of sticks from a single pile. AI uses trained Q-learning model to choose optimal moves based on state-action values, after each turn algorithm checks if all piles are empty. if yes -> last player to make a move wins, that is notmal win; 
+what i added: training loop to let AI learn optimal strategies, also check for valid pile and count before accepting user input, also game over check and AI move function that chooses the best move using learned Q-values.
+
+shopping project :
+loads dataset, converts features, maps months to numbers, encodes labels. splits data 60-40, tracks K-Nearest neighbors classifier using scikit-learn, predicts on test and compares with true labels. predicts on test and compares with true labels. 
+what I added: data preprocessing, label encoding, model training using KNN(k=1), ecaluation function for sensitivity and specificity. 
