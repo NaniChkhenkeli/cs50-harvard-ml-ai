@@ -94,3 +94,11 @@ what i added: training loop to let AI learn optimal strategies, also check for v
 shopping project :
 loads dataset, converts features, maps months to numbers, encodes labels. splits data 60-40, tracks K-Nearest neighbors classifier using scikit-learn, predicts on test and compares with true labels. predicts on test and compares with true labels. 
 what I added: data preprocessing, label encoding, model training using KNN(k=1), ecaluation function for sensitivity and specificity. 
+
+
+## ..\hw4\ ##
+project: traffic TensorFlow with GTSRB dataset 
+build AI model to classify German traffic signs, dataset contains 43 different images of roag signs, 
+what i added : load_data function (loads, reads, resizes, stores each image and its label), 
+get_model (defines CNN using TensorFlow Keras, model includes convolutional layers with ReLU activation, max-pooling layers, dropout layers, final softmax output layer with 43 units, method is compiled with categorical crossentroy loss and Adam optimizer. 
+also added training and evaluation, trained for 10 epochs, after training the model is evaluated on the test to check accuracy <3
