@@ -102,3 +102,6 @@ build AI model to classify German traffic signs, dataset contains 43 different i
 what i added : load_data function (loads, reads, resizes, stores each image and its label), 
 get_model (defines CNN using TensorFlow Keras, model includes convolutional layers with ReLU activation, max-pooling layers, dropout layers, final softmax output layer with 43 units, method is compiled with categorical crossentroy loss and Adam optimizer. 
 also added training and evaluation, trained for 10 epochs, after training the model is evaluated on the test to check accuracy <3
+
+## ..\hw6\ ##
+project implements MLM using BERT to predict missing words in sentences. it also generates attention visualization diagrams. code after prediction generates 144 attention heatmaps 12 layers x 12 heads per layer. each heatmap shows how much each words in the sentence attends to other words when predicting the masked token. I added get_mask_token_index() that locates position of mask; get_color_for_attention_score() converts attention to grayscale RGB values; visualiza_attentions() generates all attention diagrams, loops through each layer and head to visualize how BERT processes language. 
