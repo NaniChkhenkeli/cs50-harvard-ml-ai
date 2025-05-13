@@ -109,6 +109,11 @@ project ATTENTION implements MLM using BERT to predict missing words in sentence
 project PARSER uses NLTK to analyze sentence structure. defines grammar rules to generate parse trees. then identifies minimal noun phrases NPs that dont contain nested NPs. then prints a visual tree structure for each sentence. I added preprocess(sentence) -> converts input to lowercase, uses word tokenize to split the sentence into words, filters out non-alphabetic tokens; np_chunk(tree) traverses the parse tree to find NP subtrees. returns NPs that do not contain other NPs. I also added some grammar rules, like NP -> N | Det N | Det AdjP N | NP PP,
 VP -> V | V NP | V PP | Adv VP, PP -> P NP, AdjP -> Adj | Adj AdjP, S -> S Conj S. 
 
+
+## ..\hw7\ ##
+https://colab.research.google.com/drive/1FfOuXGMj9Q5X4y5j7b2HV6NvOc_36Auz?usp=sharing&classId=6138f6af-5a93-455a-904f-e464c6ff5169&assignmentId=4b8be760-2f2d-407f-98f8-94a07360486a&submissionId=6319b626-601d-1c19-310e-0d0fb32b3a2b
+
+
 ## ..\hw8\ ##
 E00 
 what: read file, bui;d vocabulary, map them to indices, adding special token dot to indicate the start and end of a name. 
