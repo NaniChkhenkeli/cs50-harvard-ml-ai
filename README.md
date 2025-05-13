@@ -108,3 +108,26 @@ project ATTENTION implements MLM using BERT to predict missing words in sentence
 
 project PARSER uses NLTK to analyze sentence structure. defines grammar rules to generate parse trees. then identifies minimal noun phrases NPs that dont contain nested NPs. then prints a visual tree structure for each sentence. I added preprocess(sentence) -> converts input to lowercase, uses word tokenize to split the sentence into words, filters out non-alphabetic tokens; np_chunk(tree) traverses the parse tree to find NP subtrees. returns NPs that do not contain other NPs. I also added some grammar rules, like NP -> N | Det N | Det AdjP N | NP PP,
 VP -> V | V NP | V PP | Adv VP, PP -> P NP, AdjP -> Adj | Adj AdjP, S -> S Conj S. 
+
+## ..\hw8\ ##
+E00 
+what: read file, bui;d vocabulary, map them to indices, adding special token dot to indicate the start and end of a name. 
+How: each name was pedded with two start tokens to enable trigram training. for every trigram, store inouts x and targets y.
+E01
+what: created neural set that uses character embeddings, hidden layer and output layer to predict next character. 
+how: used embedding matrix c to avoid one hot encoding, combined embeddings for the 2-character context. passed throught linear layer, output layer, used F.cross_entropy loss, trained with gradient descent using a learning rate decay schedule. 
+E02 -  
+what: split dataset 80-10-10. 
+how: evaluated final model on all 3 sets, reported loss to compare generalization. 
+E03 
+ehat: applied weight decay,
+how: added l2_lambda * sum(p**2) to loss during trainig, tuned lambda and measured dev loss. 
+E04
+what:did not use one-hot wncoding. 
+how: used embedding table.
+E05
+what: used torch.nn.functioanl.cross_entropy.
+how: F.cross_entropy handles both log_softmax and nll_loss internally. 
+E06 
+what: generated names char by char using trained model. 
+how: start from [0,0], stopped when dot was generated. 
