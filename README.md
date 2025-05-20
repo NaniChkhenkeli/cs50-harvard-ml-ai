@@ -136,3 +136,9 @@ how: F.cross_entropy handles both log_softmax and nll_loss internally.
 E06 
 what: generated names char by char using trained model. 
 how: start from [0,0], stopped when dot was generated. 
+
+
+## ..\hw9\ ##
+task trains character level name generator using simple neural network. it learns to predict the next character in names and then uses model to generate new, realistic names one character at a time. 
+[input chars] → Embedding → Linear → BatchNorm → Tanh → Linear → BatchNorm → Output logits
+trains mini batches with cross entropy loss, uses learning rate scheduling, tracks log loss for visualization. computes loss on training, validation, test splits. autoregressively generates new names char by char from rrained model, compares initial model loss to theoretical uniform loss to confirm proper initialization. 
